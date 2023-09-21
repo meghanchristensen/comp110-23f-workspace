@@ -22,7 +22,7 @@ if len(guess) == len(sneaky_word):
             if (guess[idx] != sneaky_word[idx]):
                 existed = False
                 alt_idx = 0
-                while not existed and alt_idx <= len(sneaky_word) - 1:
+                while existed == False and alt_idx <= len(sneaky_word) - 1:
                     if sneaky_word[alt_idx] == guess[idx]:
                         existed = True
                     else:
