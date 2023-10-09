@@ -1,0 +1,4 @@
+"""figuring out quiz"""
+
+
+print(int(2 + 2 / 2 ** (2 * 0)))
