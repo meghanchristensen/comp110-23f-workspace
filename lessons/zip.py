@@ -27,5 +27,5 @@ def favorite_color(fav_color: dict[str, str]) -> str:
         else:
             color_count[color] = 1
     return pop_color
-
 print(favorite_color({"Marc": "yellow", "Ezri": "blue", "Kris": "blue"}))
+
