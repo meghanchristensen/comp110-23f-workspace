@@ -57,7 +57,7 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attendance_log: dict[str, list[str]], day: str, name: str) -> dict[str, list[str]]:
     """When given attendence logs, a master list will be printed."""
-    if day in attendance_log and name not in attendance_log[day]:
+    if day in attendance_log:
         attendance_log[day].append(name)
     else:
         attendance_log[day] = [name]
