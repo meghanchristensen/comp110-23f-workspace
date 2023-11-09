@@ -24,9 +24,10 @@ def favorite_color(fav_color: dict[str, str]) -> str:
             color_list[fav_color[color]] += 1
         else:
             color_list[fav_color[color]] = 1
-        if color_list[fav_color[color]] >= count:
-            count = color_list[fav_color[color]]
-            best_color = fav_color[color]
+    for color in color_list:
+        if color_list[color] > count:
+            count = color_list[color]
+            best_color = color
     return best_color
 
 
@@ -56,7 +57,7 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attendance_log: dict[str, list[str]], day: str, name: str) -> dict[str, list[str]]:
     """When given attendence logs, a master list will be printed."""
-    if day in attendance_log:
+    if day in attendance_log and name not in attendance_log[day]:
         attendance_log[day].append(name)
     else:
         attendance_log[day] = [name]
