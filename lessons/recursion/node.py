@@ -13,7 +13,7 @@ class Node:
         self.next = next
 
     def __str__(self) -> str:
-        """Practice commit"""
+        """Practice commit2"""
         if self.next is None:
             # base case
             return str(self.data)
